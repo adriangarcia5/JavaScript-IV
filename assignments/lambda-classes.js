@@ -35,13 +35,13 @@ class Student extends Instructor{
         this.favSubjects = studentAttributes.favSubjects;
     }
     listsSubjects(){
-
+        return this.favSubjects;
     }
-    PRAssignment(){
-
+    PRAssignment(subject){
+        return `${this.name} has submitted a PR for ${subject}.`;
     }
-    sprintChallenge(){
-
+    sprintChallenge(subject){
+        return `${this.name} has begun sprint challenge on ${subject}.`;
     }
 }
 
@@ -51,10 +51,10 @@ class ProjectManager extends Student{
         this.gradClassName = managerAttributes.gradClassName;
         this.favInstructor = managerAttributes.favInstructor;
     }
-    standUp(){
-
+    standUp(channel){
+        return `${this.name} announces to ${channel}, @channel standy times!​​​​​`;
     }
-    debugsCode(){
-        
+    debugsCode(student, subject){
+        return `${this.name} debugs ${student}'s code on ${subject}.`;
     }
 }

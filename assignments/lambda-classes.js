@@ -41,6 +41,20 @@ class Student extends Instructor{
 
     }
     sprintChallenge(){
+
+    }
+}
+
+class ProjectManager extends Student{
+    constructor (managerAttributes){
+        super(managerAttributes);
+        this.gradClassName = managerAttributes.gradClassName;
+        this.favInstructor = managerAttributes.favInstructor;
+    }
+    standUp(){
+
+    }
+    debugsCode(){
         
     }
 }

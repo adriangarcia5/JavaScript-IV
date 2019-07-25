@@ -22,7 +22,7 @@ class Instructor extends Person{
         return `Today we are learning about ${subject}.`;
     }
     grade(student, subject){
-        return `${student}receives a perfect score on ${subject}`;
+        return `${student} receives a perfect score on ${subject}`;
     }
 
 }
@@ -41,7 +41,7 @@ class Student extends Instructor{
         return `${this.name} has submitted a PR for ${subject}.`;
     }
     sprintChallenge(subject){
-        return `${this.name} has begun sprint challenge on ${subject}.`;
+        return `${this.name} has begun the sprint challenge on ${subject}.`;
     }
 }
 
@@ -59,8 +59,8 @@ class ProjectManager extends Student{
     }
 }
 
-const dave = new Instructor ({
-    name: "Dave",
+const solis = new Instructor ({
+    name: "Solis",
     location: "Houston",
     age: 27,
     gender: "male",
@@ -86,7 +86,7 @@ const adrian = new Student ({
     gender: "male",
     previousBackground: "University Student",
     className: "Web22",
-    faveSubjects: ["Git", "JavaScript"]
+    favSubjects: ["Git", "JavaScript"]
 })
 
 const joey = new Student ({
@@ -96,7 +96,7 @@ const joey = new Student ({
     gender: "male",
     previousBackground: "Dare Devil",
     className: "Web23",
-    faveSubjects: ["LESS", "Preprocessing"]
+    favSubjects: ["LESS", "Preprocessing"]
 })
 
 const samira = new ProjectManager ({
@@ -108,7 +108,7 @@ const samira = new ProjectManager ({
     specialty: "Game Development",
     catchPhrase:"I make the games, but I don't play them.",
     gradClassName: "web14",
-    faveInstructor: "Carlos"
+    favInstructor: "Carlos"
 })
 
 const mariana = new ProjectManager ({
@@ -120,5 +120,26 @@ const mariana = new ProjectManager ({
     specialty: "Visual Programming/Design",
     catchPhrase:"I make the games, but I don't play them.",
     gradClassName: "web10",
-    faveInstructor: "Andres"
+    favInstructor: "Andres"
 })
+
+console.log(solis.name);
+console.log(solis.speak());
+
+console.log(frank.specialty);
+console.log(frank.favLanguage);
+console.log(frank.catchPhrase);
+console.log(solis.demo("Git Hub and Git Bash"));
+console.log(solis.grade("Joey", "Git Hub and Git Bash"));
+
+console.log(adrian.previousBackground);
+console.log(adrian.className);
+console.log(adrian.favSubjects);
+console.log(joey.listsSubjects());
+console.log(joey.PRAssignment("JavaScript-IV"));
+console.log(joey.sprintChallenge("Less and Preprocessors"));
+
+console.log(samira.gradClassName);
+console.log(samira.favInstructor);
+console.log(mariana.standUp("Web 22 channel"));
+console.log(mariana.debugsCode("Joey", "Responsive Design"));

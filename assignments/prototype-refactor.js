@@ -53,16 +53,15 @@ class CharacterStats extends GameObject{
     }
 }
 
-
-  function CharacterStats(characterStats){
-    GameObject.call(this, characterStats)
-    this.healthPoints = characterStats.healthPoints;
-  }
-  CharacterStats.prototype = Object.create(GameObject.prototype);
+//   function CharacterStats(characterStats){
+//     GameObject.call(this, characterStats)
+//     this.healthPoints = characterStats.healthPoints;
+//   }
+//   CharacterStats.prototype = Object.create(GameObject.prototype);
   
-  CharacterStats.prototype.takeDamage = function(){
-    return `${this.name} took damage.`;
-  }
+//   CharacterStats.prototype.takeDamage = function(){
+//     return `${this.name} took damage.`;
+//   }
   
   /*
     === Humanoid (Having an appearance or character resembling that of a human.) ===
@@ -73,17 +72,30 @@ class CharacterStats extends GameObject{
     * should inherit destroy() from GameObject through CharacterStats
     * should inherit takeDamage() from CharacterStats
   */
-  function Humanoid (humanoidObjects){
-    CharacterStats.call(this, humanoidObjects);
-    this.team = humanoidObjects.team;
-    this.weapons = humanoidObjects.weapons;
-    this.language = humanoidObjects.language;
+
+class Humanoid extends CharacterStats{
+    constructor(humanoidObjects){
+        super(humanoidObjects);
+        this.team = humanoidObjects.team;
+        this.weapons = humanoidObjects.weapons;
+        this.language = humanoidObjects.language;
   }
-  Humanoid.prototype = Object.create(CharacterStats.prototype);
+  greet(){
+    return `${this.name} offers a greeting in ${this.language}.`
+  }
+    }
+
+//   function Humanoid (humanoidObjects){
+//     CharacterStats.call(this, humanoidObjects);
+//     this.team = humanoidObjects.team;
+//     this.weapons = humanoidObjects.weapons;
+//     this.language = humanoidObjects.language;
+//   }
+//   Humanoid.prototype = Object.create(CharacterStats.prototype);
   
-  Humanoid.prototype.greet = function(){
-    return `${this.name} offers a greeting in ${this.language}.`;
-  }
+//   Humanoid.prototype.greet = function(){
+//     return `${this.name} offers a greeting in ${this.language}.`;
+//   }
    
   /*
     * Inheritance chain: GameObject -> CharacterStats -> Humanoid

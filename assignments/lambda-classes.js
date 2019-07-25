@@ -58,3 +58,67 @@ class ProjectManager extends Student{
         return `${this.name} debugs ${student}'s code on ${subject}.`;
     }
 }
+
+const dave = new Instructor ({
+    name: "Dave",
+    location: "Houston",
+    age: 27,
+    gender: "male",
+    favLanguage: "Pig Latin",
+    specialty: "Web Development",
+    catchPhrase:"iyay ikelay otay odecay"
+})
+
+const frank = new Instructor ({
+    name: "Frank",
+    location: "College Station",
+    age: 28,
+    gender: "male",
+    favLanguage: "C++",
+    specialty: "Mobile Apps",
+    catchPhrase:"I'm Frank the coding Tank"
+})
+
+const adrian = new Student ({
+    name: "Adrian",
+    location: "Austin",
+    age: 26,
+    gender: "male",
+    previousBackground: "University Student",
+    className: "Web22",
+    faveSubjects: ["Git", "JavaScript"]
+})
+
+const joey = new Student ({
+    name: "Joey",
+    location: "San Antonio",
+    age: 24,
+    gender: "male",
+    previousBackground: "Dare Devil",
+    className: "Web23",
+    faveSubjects: ["LESS", "Preprocessing"]
+})
+
+const samira = new ProjectManager ({
+    name: "Samira",
+    location: "Brownsville",
+    age: 25,
+    gender: "female",
+    favLanguage: "Unity",
+    specialty: "Game Development",
+    catchPhrase:"I make the games, but I don't play them.",
+    gradClassName: "web14",
+    faveInstructor: "Carlos"
+})
+
+const mariana = new ProjectManager ({
+    name: "Mariana",
+    location: "San Antonio",
+    age: 29,
+    gender: "female",
+    favLanguage: "Dynamo",
+    specialty: "Visual Programming/Design",
+    catchPhrase:"I make the games, but I don't play them.",
+    gradClassName: "web10",
+    faveInstructor: "Andres"
+})
